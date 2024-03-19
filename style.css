@@ -1,0 +1,21 @@
+body {
+    background-color: whitesmoke;
+    font-family: Arial;   
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 0 10px #2e2d2d;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+.centro {
+    /*tamanho - largura */
+    width: 1000px;
+    /* centralizar */
+    margin: auto;
+}
