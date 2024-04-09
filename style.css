@@ -1,32 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(5, 201, 250);
     font-family: Arial;
     Margin: 0;   
 }
 
-header {
-    background-color: rgb(23, 203, 223);
-    width: 100%;
-    box-shadow: 0 0 10px #2e2d2d;
-    padding: 1px;
-    box-sizing: border-box;
+
+.title {
+    color: rgb(4, 12, 248);
 }
 
-header nav {
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 20px;
+}
+
+.Navegacao {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.Navegacao nav {
     float: right;
-    margin-top: 30px;
 }
 
-header nav a {
+.Navegacao nav a {
     text-decoration: none;
     color: rgb(8, 84, 247);
     margin: 15px;
 }
 
-h1 {
-    text-align: center;
-    color: blue;
-}
 .centro {
     /*tamanho - largura */
     width: 1000px;
@@ -37,4 +48,15 @@ h1 {
 .centro {
     /* centralizar */
     margin: auto;
+}
+
+.telaFundo {
+    background-image: url("imagem/vecteezy_ocean-background-in-vector_280778.jpg");
+    height: 50vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
