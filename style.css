@@ -21,6 +21,10 @@ section {
     margin-bottom: 640px; /* Adicione a margem desejada entre as seções */
 }
 
+.space-between-sections-contato {
+    margin-bottom: 200px; /* Adiciona a margem no final da sessão contato */
+}
+
 header nav ul {
     display: flex;
     justify-content: space-between;
@@ -33,6 +37,7 @@ header nav ul {
     top: 0;
     right: 0;
     position: fixed;
+    display: none;
 }
 
 .Navegacao nav {
@@ -45,9 +50,19 @@ header nav ul {
     margin: 15px;
 }
 
+.header-menu {
+    padding: 10px;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.show {
+    display: block; /* mostrar a nav em telas maiores */
+}
+
 .centro {
-    /*tamanho - largura */
-    width: 1000px;
     /* centralizar */
     margin: auto;
 }
@@ -109,7 +124,7 @@ header nav ul {
     /* borda arredondada */
     border-radius: 10px;
     /*margem externa */
-    margin: 10px
+    margin: 15px
 }
 
 .gridapresentacao {
@@ -190,5 +205,47 @@ footer {
 
 ul {
     list-style-type: none;
+    margin-top: 20px;
 }
 
+#contato ul li {
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    /* Estilos para telas menores que 768px de largura */
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(114, 209, 237);
+        position: relative;
+        margin: auto;
+    }
+
+    header nav ul li {
+        padding: 10px;
+    }
+
+    .Navegacao {
+        right: auto;
+    }
+
+    .grid, .gridfases, .gridfichatecnica {
+        display: flex;
+        flex-wrap: wrap; /* Envolve as colunas quando não couberem na tela */
+        justify-content: center;
+        flex-direction: column;
+        width: 200%;
+    }
+
+    .grid .coluna, .gridfases .colunafases, .colunafichatecnica {
+        width: 45%; /* Define a largura das colunas para caberem em telas menores */
+    }
+
+    .space-between-sections {
+        margin-bottom: 100px; /* Adicione a margem desejada entre as seções */
+    }
+}

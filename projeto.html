@@ -4,6 +4,7 @@
 <head>
     <title>SUBMARINE ADVENTURE</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="imagem/36.01-removebg-preview.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +21,11 @@
         <div class="telaFundo">
             <img src="imagem/vecteezy_ocean-background-in-vector_280778.jpg">
             <h1 class="title">SUBMARINE ADVENTURE</h1>
+
+            <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+
             <div class="Navegacao">
                 <nav>
                     <ul>
@@ -179,7 +185,7 @@
          <section id="jogo" class="space-between-sections">
                     <h2>Jogo</h2>
                     <p>
-                        Em um mundo submarino misterioso, o bravo submarino explorador, conhecido como Subby, embarca em
+                        Em Submarine Adventure, o bravo submarino explorador, conhecido como Subby, embarca em
                         uma
                         jornada épica para encontrar o lendário tesouro perdido nas profundezas do oceano. No entanto,
                         para
@@ -193,14 +199,16 @@
                         desbloquear
                         os segredos do tesouro perdido?
                     </p>
+
+            <iframe width="100%" height="500" src="jogo/index.html"></iframe>
         </section>
 
-            <section id="contato" class="space-between-sections">
+            <section id="contato" class="space-between-sections-contato">
                 <h2>CONTATO</h2>
                 <ul>
-                    <li><i class="far fa-envelope"></i> E-mail: rodrigo_oliveeira@hotmail.com</li>
-                    <li><i class="fab fa-github"></i> GitHub: rsoliveeira</li>
-                    <li><i class="fab fa-instagram"></i> Instagram: rsoliveeira</li>
+                    <li><i class="far fa-envelope"></i> <strong>E-mail:</strong> rodrigo_oliveeira@hotmail.com</li>
+                    <li><i class="fab fa-github"></i> <strong>GitHub:</strong> rsoliveeira</li>
+                    <li><i class="fab fa-instagram"></i> <strong>Instagram:</strong> rsoliveeira</li>
                 </ul>
             </section>            
     </main>
@@ -210,3 +218,11 @@
     </footer>
 </body>
 </html>
+
+<script>
+    function mostrarMenu() {
+        let menu = document.querySelector(".Navegacao");
+        let button = document.querySelector(".header-menu");
+        menu.classList.toggle("show");
+    }
+</script>
