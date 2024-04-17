@@ -30,7 +30,6 @@ header nav ul {
 }
 
 .Navegacao {
-    position: absolute;
     top: 0;
     right: 0;
     position: fixed;
@@ -88,12 +87,14 @@ header nav ul {
     text-transform: uppercase;
 }
 
-#quemsomos p, #jogo p, #contato p{
+#quemsomos p, #jogo p, #contato p {
     margin: 2%;
     text-align: center; /* Centraliza o texto */
     text-align: justify; /* Justifica o texto */
     margin-top: 15px; /* Reduz a margem superior do p */
 }
+
+
 
 .grid {
     /* aplicar a grid */
@@ -102,14 +103,38 @@ header nav ul {
     grid-template-columns: 25% 25% 25% 25%;
 }
 
-.grid .coluna {
+.grid .coluna, .gridfases .colunafases {
     /* sombra */
-    box-shadow: 0 0 10px #CCC;
+    box-shadow: 0 0 10px rgb(12, 12, 136);
     /* borda arredondada */
     border-radius: 10px;
     /*margem externa */
     margin: 10px
 }
+
+.gridapresentacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px; /* espaçamento entre as colunas */
+    max-width: 1000px; /* largura máxima da grid */
+    margin: 0 auto; /* centraliza a grid na página */
+    padding: 10px; /* espaçamento interno da grid */
+}
+
+.colunaapresentacao {
+    box-shadow: 0 0 10px rgb(12, 12, 136);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.colunaapresentacao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Redimensiona a imagem para cobrir o espaço */
+    border-radius: 10px 10px 0 0; /* arredonda apenas os cantos superiores */
+}
+
+
 
 .grid .coluna img {
     /* largura */
@@ -125,10 +150,45 @@ header nav ul {
 }
 
 footer {
-    background-color: black;
+    background-color: rgb(160, 243, 36);
     color: white;
     padding: 30px;
     box-sizing: border-box;
     text-align: center;
+}
+
+.gridfases {
+    /* aplicar a grid */
+    display: flex;
+    /* configura as colunas */
+    justify-content: space-around;
+    text-align: center;
+}
+
+.gridfases .colunafases img {
+    max-width: 100%;
+    /* Altura automática para manter a proporção */
+    height: auto;
+    /* Centralizar a imagem horizontalmente */
+    margin: 0 auto;
+}
+
+.gridfichatecnica {
+    display: flex;
+}
+
+.colunafichatecnica {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    /* sombra */
+    box-shadow: 0 0 10px rgb(12, 12, 136);
+    /* margem externa */
+    margin: 10px;
+}
+
+ul {
+    list-style-type: none;
 }
 
