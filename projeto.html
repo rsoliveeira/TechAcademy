@@ -17,11 +17,8 @@
 
 <body>
     <header>
-        <a id="home"></a>
         <div class="telaFundo">
-            <img src="imagem/vecteezy_ocean-background-in-vector_280778.jpg">
-            <h1 class="title">SUBMARINE ADVENTURE</h1>
-
+            <section id="home" class="space-between-sections"></section>
             <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
                 <i class="fa-solid fa-bars"></i>
             </a>
@@ -46,6 +43,9 @@
                         </li>
                     </ul>
                 </nav>
+            </div>
+            <div>
+                <h1 class="title">SUBMARINE ADVENTURE</h1>
             </div>
         </div>
     </header>
@@ -107,7 +107,7 @@
                             <strong>Polvo</strong>
                         </p>
                         <p>
-                            Personagem Fase 1
+                            Inimigo Fase 1
                         </p>
                     </div> <!--fim da coluna-->
 
@@ -117,7 +117,7 @@
                             <strong>Tubarão</strong>
                         </p>
                         <p>
-                            Personagem Fase 2
+                            Inimigo Fase 2
                         </p>
                     </div> <!--fim da coluna-->
 
@@ -127,7 +127,7 @@
                             <strong>Mina Naval</strong>
                         </p>
                         <p>
-                            Personagem Fase 3
+                            Inimigo Fase 3
                         </p>
                     </div> <!--fim da coluna-->
                     </div>
@@ -199,8 +199,17 @@
                         desbloquear
                         os segredos do tesouro perdido?
                     </p>
+                    
+                    <p><strong>COMO JOGAR:</strong></p>
+                        <p>
+                        Use as setas do teclado para mover o Subby, evite os obstáculos e criaturas marinhas.
+                        </p>
 
-            <iframe width="100%" height="500" src="jogo/index.html"></iframe>
+                        <p>
+                            <a href="./jogo/index.html" class="btn" target="-black"><br>JOGUE AGORA<br><br></a>
+                            </p>
+
+                      <iframe width="100%" height="500" src="jogo/index.html"></iframe>
         </section>
 
             <section id="contato" class="space-between-sections-contato">
@@ -221,8 +230,19 @@
 
 <script>
     function mostrarMenu() {
-        let menu = document.querySelector(".Navegacao");
-        let button = document.querySelector(".header-menu");
+        var menu = document.querySelector(".Navegacao");
         menu.classList.toggle("show");
     }
+
+    // Função para fechar o menu
+    function fecharMenu() {
+        var menu = document.querySelector(".Navegacao");
+        menu.classList.remove("show");
+    }
+
+    // Adiciona um evento de clique a todos os itens do menu para fechar o menu quando clicados
+    document.querySelectorAll('.Navegacao nav ul li a').forEach(item => {
+        item.addEventListener('click', fecharMenu);
+    });
+
 </script>
